@@ -4,7 +4,7 @@
 --------------------------------------------*/
 
 var express = require('express');
-var bodyParser = require('body-parser');
+var parser = require('body-parser');
 var router = require('./routes');
 var morgan = require('morgan');
 
@@ -18,17 +18,19 @@ var app = express();
 
 require('./database');
 
+/* helpers
+--------------------------------------------*/
+
+app.use('/', express.static('public'));
+
+app.use(morgan('dev'));
+
+app.use(parser.json());
+
 /* routes
 --------------------------------------------*/
 
 app.use('/api', router);
-
-/* helpers
---------------------------------------------*/
-
-app.use(morgan('dev'));
-
-app.use(bodyParser());
 
 /* start app
 --------------------------------------------*/

@@ -14,7 +14,19 @@ var getAllSnippets = function(req, res) {
   });
 };
 
+var createSnippet = function(req, res) {
+  var snippet = req.body;
+  Snippet.create(snippet, function(err, snippet) {
+    if (err) {
+      return res.json({err: err.message});
+    } else {
+      res.json({'snippet': snippet, message: 'Snippet created'});
+    }
+  });
+};
+
 exports.getAllSnippets = getAllSnippets;
+exports.createSnippet = createSnippet;
 
 // NOTE: Decided to use 'exports' with each function
 // instead of 'module.exports' with all functions in an object
