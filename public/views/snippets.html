@@ -1,6 +1,7 @@
 <div class="snippet" ng-repeat="snippet in data.snippets">
   <div class="info">
     <div class="name">{{ snippet.name}}</div>
+    <a href="" class="delete" ng-click="deleteSnippet(snippet, $index)">Delete</a>
     <div class="properties">
       <pre>
         <code>

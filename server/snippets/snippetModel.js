@@ -7,7 +7,10 @@ var SnippetSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  properties: String
+  properties: {
+    type: String,
+    trim: true
+  }
 });
 
 module.exports = mongoose.model('Snippet', SnippetSchema);
