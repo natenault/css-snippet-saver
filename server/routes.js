@@ -3,25 +3,10 @@
 var express = require('express');
 var router = express.Router();
 
-// Test Mock Data
-var snippets = require('../mock/snippets.json');
+var snippetController = require('./snippets/snippetController.js');
 
 
-router.get('/snippets', function(req, res) {
-  res.json({snippets: snippets});
-});
+router.get('/snippets', snippetController.getAllSnippets);
 
 
 module.exports = router;
-/*
-
-/snippets
-GET
-
-/snippets/:name
-GET
-POST
-DELETE
-PUT (maybe)
-
-*/
