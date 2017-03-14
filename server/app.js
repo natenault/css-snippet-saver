@@ -8,7 +8,15 @@ var bodyParser = require('body-parser');
 var router = require('./routes');
 var morgan = require('morgan');
 
+/* Express init
+--------------------------------------------*/
+
 var app = express();
+
+/* Database
+--------------------------------------------*/
+
+require('./database');
 
 /* routes
 --------------------------------------------*/

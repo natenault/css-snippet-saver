@@ -1,5 +1,8 @@
 ### node etc ###
 
+# Mock Data
+mock
+
 # Logs
 logs
 *.log

@@ -4,7 +4,7 @@
   "description": "A css snippet library MVP",
   "author": "",
   "license": "UNLICENSED",
-  "main": "index.js",
+  "main": "server/app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/natenault/css-snippet-saver.git"
