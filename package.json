@@ -4,7 +4,7 @@
   "description": "A css snippet library MVP",
   "author": "",
   "license": "UNLICENSED",
-  "main": "server/app.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/natenault/css-snippet-saver.git"
@@ -13,7 +13,7 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "start": "node server/app.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "^1.17.1",

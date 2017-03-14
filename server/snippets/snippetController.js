@@ -9,11 +9,13 @@ var getAllSnippets = function(req, res) {
     if (err) {
       return res.json({message: err.message});
     } else {
-      res.json({snippets: snippets});
+      res.json(snippets);
     }
   });
 };
 
+// POST /snippets
+// Route for snippet creation
 var createSnippet = function(req, res) {
   var snippet = req.body;
   Snippet.create(snippet, function(err, snippet) {
@@ -21,6 +23,31 @@ var createSnippet = function(req, res) {
       return res.json({err: err.message});
     } else {
       res.json({'snippet': snippet, message: 'Snippet created'});
+    }
+  });
+};
+
+// DELETE /snippets
+// Route for snippet deletion
+var deleteSnippet = function(req, res) {
+  var snippet = req.body;
+  Snippet.create(snippet, function(err, snippet) {
+    if (err) {
+      return res.json({err: err.message});
+    } else {
+      res.json({'snippet': snippet, message: 'Snippet created'});
+    }
+  });
+};
+
+// GET /snippets
+// Route for single snippet
+var getSnippet = function(req, res) {
+  Snippet.find({}, function(err, snippets) {
+    if (err) {
+      return res.json({message: err.message});
+    } else {
+      res.json(snippets);
     }
   });
 };

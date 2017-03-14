@@ -30,7 +30,8 @@ app.use(parser.json());
 /* routes
 --------------------------------------------*/
 
-app.use('/api', router);
+// app.use('/', router);
+require('./routes.js')(app, express);
 
 /* start app
 --------------------------------------------*/
