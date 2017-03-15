@@ -127,6 +127,10 @@ body {
   line-height: 1.625;
 }
 
+p {
+  margin: 0 0 28px;
+}
+
 /* ## Headings
 --------------------------------------------- */
 
@@ -292,11 +296,20 @@ input[type="search"]::-webkit-search-results-button {
   width: 100%;
 }
 
+.site-inner {
+  padding-bottom: 5%;
+}
+
 @media only screen and (min-width: 860px) {
 
   .wrap {
     max-width: 1280px;
     padding: 0 40px;
+  }
+
+  .site-inner {
+    min-height: 100vh;
+    padding-bottom: 40px;
   }
 
 }
@@ -432,4 +445,14 @@ nav ul li a {
 
 /* # Site Footer
 ==================================================================================================== */
+
+.site-footer {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+  padding: 40px 0;
+}
 
