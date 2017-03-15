@@ -19,13 +19,6 @@ angular.module('snippetApp.services', [])
         url: '/api/snippets',
         data: snippet
       });
-    },
-
-    removeSnippet: function (snippet) {
-      return $http({
-        method: 'DELETE',
-        url: '/api/snippets' + snippet._id
-      });
     }
   };
 
